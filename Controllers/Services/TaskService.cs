@@ -10,13 +10,13 @@ public class TaskService
         {
             Id = 1,
             Title = "Learn .NET",
-            Status = "To-Do"
+            Status = Models.TaskStatus.Done
         },
         new TaskItem
         {
             Id = 2,
             Title = "Build Task API",
-            Status = "Done"
+            Status = Models.TaskStatus.ToDo
         }
     };
 
