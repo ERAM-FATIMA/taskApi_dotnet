@@ -15,7 +15,8 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
 ));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<TaskService>();
+builder.Services.AddScoped<TaskService>();
+builder.Services.AddScoped<UserService>();
 
 var app = builder.Build();
 

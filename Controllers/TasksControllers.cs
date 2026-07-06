@@ -73,9 +73,9 @@ public class TasksController : ControllerBase
 
 
     [HttpDelete("{id}")]
-    public IActionResult DeleteTask(int id)
+    public async Task<IActionResult> DeleteTask(int id)
     {
-        var deleted = _taskService.DeleteTask(id);
+        var deleted = await _taskService.DeleteTask(id);
 
     if(!deleted)
     {
