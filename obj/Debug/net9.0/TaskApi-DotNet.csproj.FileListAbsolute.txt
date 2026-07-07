@@ -164,3 +164,4 @@ C:\Users\HP\Documents\TaskApi-DotNet\obj\Debug\net9.0\refint\TaskApi-DotNet.dll
 C:\Users\HP\Documents\TaskApi-DotNet\obj\Debug\net9.0\TaskApi-DotNet.pdb
 C:\Users\HP\Documents\TaskApi-DotNet\obj\Debug\net9.0\TaskApi-DotNet.genruntimeconfig.cache
 C:\Users\HP\Documents\TaskApi-DotNet\obj\Debug\net9.0\ref\TaskApi-DotNet.dll
+C:\Users\HP\Documents\TaskApi-DotNet\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -37,19 +37,22 @@ public class UserService
         return true;
     }
 
-    public async Task<bool> Login(LoginRequestDto dto)
+    public async Task<User?> Login(LoginRequestDto dto)
     {
         var user = await _context.Users
             .FirstOrDefaultAsync(u => u.Email == dto.Email);
 
         if (user == null)
-            return false;
+            return null;
 
         var result = _passwordHasher.VerifyHashedPassword(
             user,
             user.PasswordHash,
             dto.Password);
 
-        return result == PasswordVerificationResult.Success;
+        if (result != PasswordVerificationResult.Success)
+            return null;
+
+        return user;
     }
 }
