@@ -4,6 +4,7 @@ using System.Security.Claims;
 using TaskApi_DotNet.DTOs;
 using TaskApi_DotNet.Models;
 using TaskApi_DotNet.Services;
+using TaskApi_DotNet.Interfaces;
 
 namespace TaskApi_DotNet.Controllers;
 
@@ -13,11 +14,11 @@ namespace TaskApi_DotNet.Controllers;
 
 public class TasksController : ControllerBase
 {
-    private readonly TaskService _taskService;
+    private readonly ITaskService _taskService;
 
     
 
-    public TasksController(TaskService taskService)
+    public TasksController(ITaskService taskService)
     {
         _taskService = taskService;
     }

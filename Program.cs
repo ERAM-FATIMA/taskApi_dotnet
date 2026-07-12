@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
 using System.Text;
+using TaskApi_DotNet.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -76,7 +77,7 @@ builder.Services.AddSwaggerGen(options =>
         }
     });
 });
-builder.Services.AddScoped<TaskService>();
+builder.Services.AddScoped< ITaskService ,TaskService >();
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<JwtService>();
 
