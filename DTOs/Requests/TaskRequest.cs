@@ -1,4 +1,4 @@
-namespace TaskApi_DotNet.DTOs;
+namespace TaskApi_DotNet.DTOs.Requests;
 using TaskApi_DotNet.Models;
 using System.ComponentModel.DataAnnotations;
 

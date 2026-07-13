@@ -1,9 +1,8 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
-using TaskApi_DotNet.DTOs;
+using TaskApi_DotNet.DTOs.Requests;
 using TaskApi_DotNet.Models;
-using TaskApi_DotNet.Services;
 using TaskApi_DotNet.Interfaces;
 
 namespace TaskApi_DotNet.Controllers;

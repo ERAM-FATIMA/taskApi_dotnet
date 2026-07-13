@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using TaskApi_DotNet.DTOs;
+using TaskApi_DotNet.Interfaces;
 using TaskApi_DotNet.Services;
 
 namespace TaskApi_DotNet.Controllers;
@@ -8,10 +9,10 @@ namespace TaskApi_DotNet.Controllers;
 [Route("api/[controller]")]
 public class UsersController : ControllerBase
 {
-    private readonly UserService _userService;
+    private readonly IUserService _userService;
     private readonly JwtService _jwtService;
 
-    public UsersController(UserService userService , JwtService jwtService)
+    public UsersController(IUserService userService , JwtService jwtService)
     {
         _userService = userService;
         _jwtService = jwtService;

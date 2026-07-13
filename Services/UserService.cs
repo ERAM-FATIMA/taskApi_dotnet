@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore;
 using TaskApi_DotNet.Data;
 using TaskApi_DotNet.DTOs;
 using TaskApi_DotNet.Models;
-
+using TaskApi_DotNet.Interfaces;
 namespace TaskApi_DotNet.Services;
 
-public class UserService
+public class UserService : IUserService
 {
     private readonly AppDbContext _context;
     private readonly PasswordHasher<User> _passwordHasher = new();
